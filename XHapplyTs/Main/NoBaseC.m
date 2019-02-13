@@ -18,9 +18,8 @@
 {
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-//    UIImage * bgImage  = [UIImage imageNamed:@"QQJXNavi"];
-//    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
-//    [self.navigationController.navigationBar setShadowImage:[[QQJXPublicApi sharedQQJXPublicApi] BgImageFromColors:@[QQJXButHighlighted,QQJXButNormal,QQJXButNormal] withFrame:CGRectMake(0, 0, QQJXWidth, 0.5) gradientDir:leftToright]];
+    UIImage * bgImage  = [UIImage imageNamed:@"JxNavi"];
+    [self.navigationController.navigationBar setBackgroundImage:bgImage forBarMetrics:UIBarMetricsDefault];
 }
 
 -(void)QQJXNaviTitle:(NSString *)naviTitle

@@ -36,6 +36,8 @@
 		74BB4B832213C57300F91991 /* NoMineBx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B822213C57300F91991 /* NoMineBx.m */; };
 		74BB4B852213C5A100F91991 /* NoMineS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4B842213C5A100F91991 /* NoMineS.storyboard */; };
 		74BB4B882213D5B000F91991 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B872213D5B000F91991 /* CYLPlusButtonSubclass.m */; };
+		74BB4B8B2213F93100F91991 /* NoLoginBx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B8A2213F93100F91991 /* NoLoginBx.m */; };
+		74BB4B8D2213F93E00F91991 /* NoLoginS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4B8C2213F93E00F91991 /* NoLoginS.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,9 @@
 		74BB4B842213C5A100F91991 /* NoMineS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoMineS.storyboard; sourceTree = "<group>"; };
 		74BB4B862213D5AF00F91991 /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
 		74BB4B872213D5B000F91991 /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
+		74BB4B892213F93100F91991 /* NoLoginBx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoLoginBx.h; sourceTree = "<group>"; };
+		74BB4B8A2213F93100F91991 /* NoLoginBx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoLoginBx.m; sourceTree = "<group>"; };
+		74BB4B8C2213F93E00F91991 /* NoLoginS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoLoginS.storyboard; sourceTree = "<group>"; };
 		C2F8CCE665D89BF26B868C99 /* Pods-XHapplyTs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XHapplyTs.release.xcconfig"; path = "Pods/Target Support Files/Pods-XHapplyTs/Pods-XHapplyTs.release.xcconfig"; sourceTree = "<group>"; };
 		F046C8D9BE2D5FADE86AA93D /* libPods-XHapplyTs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XHapplyTs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,6 +220,8 @@
 		74BB4B162213BCFB00F91991 /* Controll */ = {
 			isa = PBXGroup;
 			children = (
+				74BB4B892213F93100F91991 /* NoLoginBx.h */,
+				74BB4B8A2213F93100F91991 /* NoLoginBx.m */,
 			);
 			path = Controll;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 		74BB4B172213BCFB00F91991 /* SBx */ = {
 			isa = PBXGroup;
 			children = (
+				74BB4B8C2213F93E00F91991 /* NoLoginS.storyboard */,
 			);
 			path = SBx;
 			sourceTree = "<group>";
@@ -714,6 +722,7 @@
 				74BB4AEB2213A3AE00F91991 /* Main.storyboard in Resources */,
 				74BB4B712213C2F200F91991 /* NoHomeS.storyboard in Resources */,
 				74BB4B7B2213C49700F91991 /* NoNewS.storyboard in Resources */,
+				74BB4B8D2213F93E00F91991 /* NoLoginS.storyboard in Resources */,
 				74BB4B802213C55A00F91991 /* NoRejoiceS.storyboard in Resources */,
 				74BB4B852213C5A100F91991 /* NoMineS.storyboard in Resources */,
 				74BB4B602213BCFB00F91991 /* Assets.xcassets in Resources */,
@@ -787,6 +796,7 @@
 			files = (
 				74BB4B742213C3C500F91991 /* NoFateBx.m in Sources */,
 				74BB4B6C2213C2A700F91991 /* NoBaseC.m in Sources */,
+				74BB4B8B2213F93100F91991 /* NoLoginBx.m in Sources */,
 				74BB4B5A2213BCFB00F91991 /* WYWebProgressLayer.m in Sources */,
 				74BB4B5F2213BCFB00F91991 /* NoHomeNetApi.m in Sources */,
 				74BB4B5C2213BCFB00F91991 /* NoNetWorkApi.m in Sources */,

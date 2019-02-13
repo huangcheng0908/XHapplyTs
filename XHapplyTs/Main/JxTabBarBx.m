@@ -89,23 +89,23 @@ static CGFloat const CYLTabBarControllerHeight = 40.0f;
 {
     NSDictionary *firstTabBarItemsAttributes = @{
                                                  CYLTabBarItemTitle : @"喜缘",
-                                                 CYLTabBarItemImage : @"home_normal",  /* NSString and UIImage are supported*/
-                                                 CYLTabBarItemSelectedImage : @"home_highlight"  /* NSString and UIImage are supported*/
+                                                 CYLTabBarItemImage : @"Jxy",  /* NSString and UIImage are supported*/
+                                                 CYLTabBarItemSelectedImage : @"JxyS"  /* NSString and UIImage are supported*/
                                                  };
     NSDictionary *secondTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"喜闻",
-                                                  CYLTabBarItemImage : @"fishpond_normal",
-                                                  CYLTabBarItemSelectedImage : @"fishpond_highlight"
+                                                  CYLTabBarItemImage : @"Jxw",
+                                                  CYLTabBarItemSelectedImage : @"JxwS"
                                                   };
     NSDictionary *thirdTabBarItemsAttributes = @{
                                                  CYLTabBarItemTitle : @"喜讯",
-                                                 CYLTabBarItemImage : @"message_normal",
-                                                 CYLTabBarItemSelectedImage : @"message_highlight"
+                                                 CYLTabBarItemImage : @"Jxx",
+                                                 CYLTabBarItemSelectedImage : @"JxxS"
                                                  };
     NSDictionary *fourthTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"喜主",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight"
+                                                  CYLTabBarItemImage : @"Jxz",
+                                                  CYLTabBarItemSelectedImage : @"JxzS"
                                                   };
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,
@@ -133,12 +133,12 @@ static CGFloat const CYLTabBarControllerHeight = 40.0f;
     // set the text color for unselected state
     // 普通状态下的文字属性
     NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
-    normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    normalAttrs[NSForegroundColorAttributeName] = NoMainColor;
     
     // set the text color for selected state
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    selectedAttrs[NSForegroundColorAttributeName] = NoMainSColor;
     
     // set the text Attributes
     // 设置文字属性
@@ -179,6 +179,7 @@ static CGFloat const CYLTabBarControllerHeight = 40.0f;
     // 去除 TabBar 自带的顶部阴影
     // iOS10 后 需要使用 `-[CYLTabBarController hideTabBadgeBackgroundSeparator]` 见 AppDelegate 类中的演示;
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
+    tabBarController.selectedIndex = 2.0f;
 }
 
 - (void)updateTabBarCustomizationWhenTabBarItemWidthDidUpdate {
@@ -197,25 +198,29 @@ static CGFloat const CYLTabBarControllerHeight = 40.0f;
                                                   usingBlock:deviceOrientationDidChangeBlock];
 }
 
-- (void)customizeTabBarSelectionIndicatorImage {
+- (void)customizeTabBarSelectionIndicatorImage
+{
     ///Get initialized TabBar Height if exists, otherwise get Default TabBar Height.
     CGFloat tabBarHeight = CYLTabBarControllerHeight;
     CGSize selectionIndicatorImageSize = CGSizeMake(CYLTabBarItemWidth, tabBarHeight);
     //Get initialized TabBar if exists.
     UITabBar *tabBar = [self cyl_tabBarController].tabBar ?: [UITabBar appearance];
     [tabBar setSelectionIndicatorImage:
-     [[self class] imageWithColor:[UIColor whiteColor]
+     [[self class] imageWithColor:NoBgMainColor
                              size:selectionIndicatorImageSize]];
 }
 
-+ (UIImage *)scaleImage:(UIImage *)image {
++ (UIImage *)scaleImage:(UIImage *)image
+{
     CGFloat halfWidth = image.size.width/2;
     CGFloat halfHeight = image.size.height/2;
     UIImage *secondStrechImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(halfHeight, halfWidth, halfHeight, halfWidth) resizingMode:UIImageResizingModeStretch];
     return secondStrechImage;
 }
 
-+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
+{
     if (!color || size.width <= 0 || size.height <= 0) return nil;
     CGRect rect = CGRectMake(0.0f, 0.0f, size.width + 1, size.height);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);

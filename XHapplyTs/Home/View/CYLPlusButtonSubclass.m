@@ -98,8 +98,8 @@
 + (id)plusButton
 {
 
-    UIImage *buttonImage = [UIImage imageNamed:@"hood.png"];
-    UIImage *highlightImage = [UIImage imageNamed:@"hood-selected.png"];
+    UIImage *buttonImage = [UIImage imageNamed:@"JxTq"];
+    UIImage *highlightImage = [UIImage imageNamed:@"JxTq"];
 
     CYLPlusButtonSubclass* button = [CYLPlusButtonSubclass buttonWithType:UIButtonTypeCustom];
 
@@ -115,34 +115,19 @@
 #pragma mark -
 #pragma mark - Event Response
 
-- (void)clickPublish {
+- (void)clickPublish
+{
     CYLTabBarController *tabBarController = [self cyl_tabBarController];
     NoHomeBx * homeB = [NoHomeBx shareNoHomeBx];
-    tabBarController.selectedViewController = homeB;
-//    UIViewController *viewController = tabBarController.selectedViewController;
-//
-//    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-//                                                             delegate:nil
-//                                                    cancelButtonTitle:@"取消"
-//                                               destructiveButtonTitle:nil
-//                                                    otherButtonTitles:@"拍照", @"从相册选取", @"淘宝一键转卖", nil];
-//    [actionSheet showInView:viewController.view];
-}
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    NSLog(@"buttonIndex = %@", @(buttonIndex));
+    homeB = tabBarController.selectedViewController;
 }
 
 #pragma mark - CYLPlusButtonSubclassing
 
 + (UIViewController *)plusChildViewController
 {
-    UIViewController *plusChildViewController = [[UIViewController alloc] init];
-    plusChildViewController.view.backgroundColor = [UIColor redColor];
-    plusChildViewController.navigationItem.title = @"PlusChildViewController";
-    UIViewController *plusChildNavigationController = [[UINavigationController alloc]
+    NoHomeBx *plusChildViewController = [NoHomeBx shareNoHomeBx];
+    UIViewController * plusChildNavigationController = [[UINavigationController alloc]
                                                    initWithRootViewController:plusChildViewController];
     return plusChildNavigationController;
 }

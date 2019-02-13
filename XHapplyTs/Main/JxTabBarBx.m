@@ -166,11 +166,8 @@ static CGFloat const CYLTabBarControllerHeight = 40.0f;
     // set the bar background image
     // 设置背景图片
     UITabBar *tabBarAppearance = [UITabBar appearance];
-    
-    //FIXED:  https://github.com/ChenYilong/CYLTabBarController/issues/312
     [UITabBar appearance].translucent = NO;
-    //FIXED: https://github.com/ChenYilong/CYLTabBarController/issues/196
-    NSString *tabBarBackgroundImageName = @"tabbarBg";
+    NSString *tabBarBackgroundImageName = UI_IS_IPHONE_X ? @"tabbarBg" : @"tabbarBgS";
     UIImage *tabBarBackgroundImage = [UIImage imageNamed:tabBarBackgroundImageName];
     UIImage *scanedTabBarBackgroundImage = [[self class] scaleImage:tabBarBackgroundImage];
     [tabBarAppearance setBackgroundImage:scanedTabBarBackgroundImage];

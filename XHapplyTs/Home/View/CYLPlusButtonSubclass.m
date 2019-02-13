@@ -97,9 +97,8 @@
  */
 + (id)plusButton
 {
-
-    UIImage *buttonImage = [UIImage imageNamed:@"JxTq"];
-    UIImage *highlightImage = [UIImage imageNamed:@"JxTq"];
+    UIImage *buttonImage = [UIImage imageNamed: BsiphoneJx([NSString stringWithFormat:@"JxTq"], [NSString stringWithFormat:@"JxtuSx"], [NSString stringWithFormat:@"Jxtu"], [NSString stringWithFormat:@"Jxtu"])];
+    UIImage *highlightImage = [UIImage imageNamed: BsiphoneJx([NSString stringWithFormat:@"JxTq"], [NSString stringWithFormat:@"JxtuSx"], [NSString stringWithFormat:@"Jxtu"], [NSString stringWithFormat:@"Jxtu"])];
 
     CYLPlusButtonSubclass* button = [CYLPlusButtonSubclass buttonWithType:UIButtonTypeCustom];
 

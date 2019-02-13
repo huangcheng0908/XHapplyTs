@@ -26,6 +26,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(void)QQBackBut:(BOOL)isRoot;
 
+/**
+ 适配iPhone X以上的底部白横
+
+ @return <#return value description#>
+ */
+-(CGFloat)g9BomXs;
+
 
 @end
 

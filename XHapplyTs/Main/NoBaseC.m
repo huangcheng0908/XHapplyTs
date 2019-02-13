@@ -46,9 +46,16 @@
     }
 }
 
+-(CGFloat)g9BomXs
+{
+    return UI_IS_IPHONE_X ? -34.0f : 0.0f;
+}
 
 
-
+-(void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
 
 /*

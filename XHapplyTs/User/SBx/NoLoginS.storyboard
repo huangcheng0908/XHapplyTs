@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-292" y="169"/>
         </scene>
-        <!--No Login Bx-->
+        <!--登录-->
         <scene sceneID="1UU-QT-Px5">
             <objects>
                 <viewController storyboardIdentifier="NoLoginBx" id="jFI-kS-nFN" customClass="NoLoginBx" sceneMemberID="viewController">
@@ -36,9 +36,25 @@
                     <view key="view" contentMode="scaleToFill" id="kPx-8V-Ncx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dV0-gJ-gqj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dV0-gJ-gqj" firstAttribute="top" secondItem="t12-E5-VIB" secondAttribute="bottom" id="GUh-r0-PEU"/>
+                            <constraint firstAttribute="trailing" secondItem="dV0-gJ-gqj" secondAttribute="trailing" id="LBF-9R-5u3"/>
+                            <constraint firstItem="dV0-gJ-gqj" firstAttribute="leading" secondItem="kPx-8V-Ncx" secondAttribute="leading" id="Sdn-Od-VNf"/>
+                            <constraint firstItem="s42-lh-L8f" firstAttribute="top" secondItem="dV0-gJ-gqj" secondAttribute="bottom" id="nwt-w3-HQ2"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HxC-9X-HSj"/>
+                    <navigationItem key="navigationItem" title="登录" id="HxC-9X-HSj"/>
+                    <connections>
+                        <outlet property="g8BomHc" destination="nwt-w3-HQ2" id="FG6-xE-yKi"/>
+                        <outlet property="g8ScrollBc" destination="dV0-gJ-gqj" id="Zdo-ps-egb"/>
+                        <outlet property="g8TopBs" destination="GUh-r0-PEU" id="bRI-vH-bjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iih-qo-HMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

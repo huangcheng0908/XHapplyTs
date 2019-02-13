@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "JxTabBarBx.h"
 #import "CYLPlusButtonSubclass.h"
+#import "AppDelegate+NoAppDegS.h"
+#import "NoLoginBx.h"
 
 @interface AppDelegate ()<CYLTabBarControllerDelegate,UITabBarControllerDelegate>
 
@@ -25,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [CYLPlusButtonSubclass registerPlusButton];
-    [self QQJXLogin:NoTabBar];
+    [self NOSpplication:application didFinishLaunchingWithOptions:launchOptions];
     IQKeyboardManager * manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;
     manager.shouldResignOnTouchOutside = YES;
@@ -39,8 +41,8 @@
 {
     if (loginState == NoLogin)
     {
-//        NoLoginC * login = [NoLoginC sharedNoLoginC];
-//        self.window.rootViewController = [QQJXNavigaVC QQJXRootControll:login];
+        NoLoginBx * login = [NoLoginBx shareNoLoginBx];
+        self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:login];
     }else
     {
         JxTabBarBx * tabBarController = [[JxTabBarBx alloc] init];

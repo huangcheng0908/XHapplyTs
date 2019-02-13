@@ -12,6 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NoLoginBx : NoBaseC
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *g8BomHc;
+@property (weak, nonatomic) IBOutlet UIScrollView *g8ScrollBc;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *g8TopBs;
+
+/**
+ 登录注册
+
+ @return <#return value description#>
+ */
++(NoLoginBx *)shareNoLoginBx;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

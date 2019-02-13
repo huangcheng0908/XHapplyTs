@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
++(instancetype)onAppdelegate;
+
+-(void)QQJXLogin:(NoLoginState)loginState;
+
 
 @end
 

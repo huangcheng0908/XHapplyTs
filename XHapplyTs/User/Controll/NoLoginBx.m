@@ -7,6 +7,7 @@
 //
 
 #import "NoLoginBx.h"
+#import "NoLoginBwx.h"
 
 @interface NoLoginBx ()
 
@@ -14,9 +15,39 @@
 
 @implementation NoLoginBx
 
-- (void)viewDidLoad {
++(NoLoginBx *)shareNoLoginBx
+{
+    NoLoginBx * login = [[UIStoryboard storyboardWithName:@"NoLoginS" bundle:nil]instantiateViewControllerWithIdentifier:@"NoLoginBx"];
+    return login;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.g8BomHc.constant = self.g9BomXs;
+    self.g8ScrollBc.backgroundColor = NoLoginBgColor;
+    CGFloat height = JXFSystemiOS >= 11.0f ? (UI_IS_IPHONE_X ? -45.0f : 0.0f) : -20.0f;
+    self.g8TopBs.constant = height;
+    self.g8ScrollBc.contentSize = CGSizeMake(JXFWidth, UI_IS_IPHONE_6R ? (JXFHeight + height) : 667.0f);
+    NoLoginBwx * loginS = [[NoLoginBwx alloc]initWithFrame:CGRectMake(0, height, JXFWidth, JXFWidth * 0.6107f + 500.0f)];
+    [self.g8ScrollBc addSubview:loginS];
+}
+
+-(void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
 
 /*

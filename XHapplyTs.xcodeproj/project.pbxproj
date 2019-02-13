@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4BB3543494055CDE336A011F /* libPods-XHapplyTs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F046C8D9BE2D5FADE86AA93D /* libPods-XHapplyTs.a */; };
+		7493BA622214199100F9D45F /* AppDelegate+NoAppDegS.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493BA612214199100F9D45F /* AppDelegate+NoAppDegS.m */; };
+		7493BA6522141A7E00F9D45F /* NoLoginBwx.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493BA6422141A7E00F9D45F /* NoLoginBwx.m */; };
+		7493BA682214254C00F9D45F /* NoLoginSelctBx.m in Sources */ = {isa = PBXBuildFile; fileRef = 7493BA672214254C00F9D45F /* NoLoginSelctBx.m */; };
+		7493BA6A2214256300F9D45F /* NoLoginSelctBx.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7493BA692214256300F9D45F /* NoLoginSelctBx.xib */; };
 		74BB4AEB2213A3AE00F91991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4AE92213A3AE00F91991 /* Main.storyboard */; };
 		74BB4AF02213A3AF00F91991 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4AEE2213A3AF00F91991 /* LaunchScreen.storyboard */; };
 		74BB4AF32213A3AF00F91991 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4AF22213A3AF00F91991 /* main.m */; };
@@ -59,6 +63,13 @@
 
 /* Begin PBXFileReference section */
 		2E17F5E1DDD1B2E67117A4E4 /* Pods-XHapplyTs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XHapplyTs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XHapplyTs/Pods-XHapplyTs.debug.xcconfig"; sourceTree = "<group>"; };
+		7493BA602214199100F9D45F /* AppDelegate+NoAppDegS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+NoAppDegS.h"; sourceTree = "<group>"; };
+		7493BA612214199100F9D45F /* AppDelegate+NoAppDegS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+NoAppDegS.m"; sourceTree = "<group>"; };
+		7493BA6322141A7E00F9D45F /* NoLoginBwx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoLoginBwx.h; sourceTree = "<group>"; };
+		7493BA6422141A7E00F9D45F /* NoLoginBwx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoLoginBwx.m; sourceTree = "<group>"; };
+		7493BA662214254C00F9D45F /* NoLoginSelctBx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoLoginSelctBx.h; sourceTree = "<group>"; };
+		7493BA672214254C00F9D45F /* NoLoginSelctBx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoLoginSelctBx.m; sourceTree = "<group>"; };
+		7493BA692214256300F9D45F /* NoLoginSelctBx.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoLoginSelctBx.xib; sourceTree = "<group>"; };
 		74BB4AE02213A3AD00F91991 /* XHapplyTs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHapplyTs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BB4AEA2213A3AE00F91991 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74BB4AEF2213A3AF00F91991 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -251,6 +262,11 @@
 		74BB4B1A2213BCFB00F91991 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7493BA6322141A7E00F9D45F /* NoLoginBwx.h */,
+				7493BA6422141A7E00F9D45F /* NoLoginBwx.m */,
+				7493BA662214254C00F9D45F /* NoLoginSelctBx.h */,
+				7493BA672214254C00F9D45F /* NoLoginSelctBx.m */,
+				7493BA692214256300F9D45F /* NoLoginSelctBx.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,6 +299,8 @@
 			children = (
 				74BB4B282213BCFB00F91991 /* AppDelegate.h */,
 				74BB4B292213BCFB00F91991 /* AppDelegate.m */,
+				7493BA602214199100F9D45F /* AppDelegate+NoAppDegS.h */,
+				7493BA612214199100F9D45F /* AppDelegate+NoAppDegS.m */,
 				74BB4B672213C1ED00F91991 /* JxTabBarBx.h */,
 				74BB4B682213C1ED00F91991 /* JxTabBarBx.m */,
 				74BB4B6B2213C2A700F91991 /* NoBaseC.h */,
@@ -721,6 +739,7 @@
 				74BB4B762213C3ED00F91991 /* NoFateS.storyboard in Resources */,
 				74BB4AEB2213A3AE00F91991 /* Main.storyboard in Resources */,
 				74BB4B712213C2F200F91991 /* NoHomeS.storyboard in Resources */,
+				7493BA6A2214256300F9D45F /* NoLoginSelctBx.xib in Resources */,
 				74BB4B7B2213C49700F91991 /* NoNewS.storyboard in Resources */,
 				74BB4B8D2213F93E00F91991 /* NoLoginS.storyboard in Resources */,
 				74BB4B802213C55A00F91991 /* NoRejoiceS.storyboard in Resources */,
@@ -798,6 +817,7 @@
 				74BB4B6C2213C2A700F91991 /* NoBaseC.m in Sources */,
 				74BB4B8B2213F93100F91991 /* NoLoginBx.m in Sources */,
 				74BB4B5A2213BCFB00F91991 /* WYWebProgressLayer.m in Sources */,
+				7493BA682214254C00F9D45F /* NoLoginSelctBx.m in Sources */,
 				74BB4B5F2213BCFB00F91991 /* NoHomeNetApi.m in Sources */,
 				74BB4B5C2213BCFB00F91991 /* NoNetWorkApi.m in Sources */,
 				74BB4B832213C57300F91991 /* NoMineBx.m in Sources */,
@@ -808,9 +828,11 @@
 				74BB4B882213D5B000F91991 /* CYLPlusButtonSubclass.m in Sources */,
 				74BB4B592213BCFB00F91991 /* NSTimer+addition.m in Sources */,
 				74BB4B6F2213C2DC00F91991 /* NoHomeBx.m in Sources */,
+				7493BA622214199100F9D45F /* AppDelegate+NoAppDegS.m in Sources */,
 				74BB4B7E2213C54600F91991 /* NoRejoiceBx.m in Sources */,
 				74BB4B5E2213BCFB00F91991 /* NoParmerScModel.m in Sources */,
 				74BB4B5B2213BCFB00F91991 /* AppDelegate.m in Sources */,
+				7493BA6522141A7E00F9D45F /* NoLoginBwx.m in Sources */,
 				74BB4B792213C47000F91991 /* NoNewBx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

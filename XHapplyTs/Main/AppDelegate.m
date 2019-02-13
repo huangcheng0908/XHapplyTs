@@ -7,17 +7,47 @@
 //
 
 #import "AppDelegate.h"
+#import "JxTabBarBx.h"
+#import "CYLPlusButtonSubclass.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<CYLTabBarControllerDelegate,UITabBarControllerDelegate>
 
 @end
 
 @implementation AppDelegate
 
++(instancetype)onAppdelegate
+{
+    AppDelegate * delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    return delegate;
+}
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [CYLPlusButtonSubclass registerPlusButton];
+    [self QQJXLogin:NoTabBar];
+    IQKeyboardManager * manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.enableAutoToolbar = YES;
+    manager.enableDebugging = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
     return YES;
+}
+
+-(void)QQJXLogin:(NoLoginState)loginState
+{
+    if (loginState == NoLogin)
+    {
+//        NoLoginC * login = [NoLoginC sharedNoLoginC];
+//        self.window.rootViewController = [QQJXNavigaVC QQJXRootControll:login];
+    }else
+    {
+        JxTabBarBx * tabBarController = [[JxTabBarBx alloc] init];
+        [tabBarController hideTabBadgeBackgroundSeparator];
+        tabBarController.delegate = self;
+        self.window.rootViewController = tabBarController;
+    }
 }
 
 
@@ -46,6 +76,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    [[self cyl_tabBarController] updateSelectionStatusIfNeededForTabBarController:tabBarController shouldSelectViewController:viewController];
+    return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectControl:(UIControl *)control
+{
+   
+}
+
+
+
+
+
+
+
+
 
 
 @end

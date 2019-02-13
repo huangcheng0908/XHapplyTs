@@ -35,6 +35,7 @@
 		74BB4B802213C55A00F91991 /* NoRejoiceS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4B7F2213C55A00F91991 /* NoRejoiceS.storyboard */; };
 		74BB4B832213C57300F91991 /* NoMineBx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B822213C57300F91991 /* NoMineBx.m */; };
 		74BB4B852213C5A100F91991 /* NoMineS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4B842213C5A100F91991 /* NoMineS.storyboard */; };
+		74BB4B882213D5B000F91991 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B872213D5B000F91991 /* CYLPlusButtonSubclass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		74BB4B812213C57300F91991 /* NoMineBx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoMineBx.h; sourceTree = "<group>"; };
 		74BB4B822213C57300F91991 /* NoMineBx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoMineBx.m; sourceTree = "<group>"; };
 		74BB4B842213C5A100F91991 /* NoMineS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoMineS.storyboard; sourceTree = "<group>"; };
+		74BB4B862213D5AF00F91991 /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
+		74BB4B872213D5B000F91991 /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
 		C2F8CCE665D89BF26B868C99 /* Pods-XHapplyTs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XHapplyTs.release.xcconfig"; path = "Pods/Target Support Files/Pods-XHapplyTs/Pods-XHapplyTs.release.xcconfig"; sourceTree = "<group>"; };
 		F046C8D9BE2D5FADE86AA93D /* libPods-XHapplyTs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XHapplyTs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -326,6 +329,8 @@
 		74BB4B2F2213BCFB00F91991 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74BB4B862213D5AF00F91991 /* CYLPlusButtonSubclass.h */,
+				74BB4B872213D5B000F91991 /* CYLPlusButtonSubclass.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -790,6 +795,7 @@
 				74BB4AF32213A3AF00F91991 /* main.m in Sources */,
 				74BB4B582213BCFB00F91991 /* NoPublicApi.m in Sources */,
 				74BB4B562213BCFB00F91991 /* NoLocalApi.m in Sources */,
+				74BB4B882213D5B000F91991 /* CYLPlusButtonSubclass.m in Sources */,
 				74BB4B592213BCFB00F91991 /* NSTimer+addition.m in Sources */,
 				74BB4B6F2213C2DC00F91991 /* NoHomeBx.m in Sources */,
 				74BB4B7E2213C54600F91991 /* NoRejoiceBx.m in Sources */,

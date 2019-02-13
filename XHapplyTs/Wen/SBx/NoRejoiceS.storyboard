@@ -28,7 +28,7 @@
         <!--首页-->
         <scene sceneID="9QS-8Z-ZDf">
             <objects>
-                <viewController id="ch5-yB-b7g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoRejoiceBx" id="ch5-yB-b7g" customClass="NoRejoiceBx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ud6-tc-Gzc"/>
                         <viewControllerLayoutGuide type="bottom" id="YRu-o2-PJI"/>

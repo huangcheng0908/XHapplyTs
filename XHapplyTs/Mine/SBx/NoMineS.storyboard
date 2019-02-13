@@ -28,7 +28,7 @@
         <!--首页-->
         <scene sceneID="po2-Cu-ifc">
             <objects>
-                <viewController id="JOy-ow-TaV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoMineBx" id="JOy-ow-TaV" customClass="NoMineBx" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wl1-ej-5EB"/>
                         <viewControllerLayoutGuide type="bottom" id="ayz-GX-wR1"/>

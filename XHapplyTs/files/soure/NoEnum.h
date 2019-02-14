@@ -15,6 +15,13 @@ typedef NS_ENUM(NSInteger,NoLoginState)
     NoTabBar
 };
 
+typedef NS_ENUM(NSInteger,NoCodeTy)
+{
+    Nogeneral = 0,
+    NoRegistverifi = 1,
+    NoLogauth = 2
+};
+
 
 
 

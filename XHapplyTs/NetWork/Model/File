@@ -1,16 +1,4 @@
 {
-data =     {
-channel = "\U4e2a\U9669,\U56e2\U9669,\U4e92\U52a8,\U94f6\U4fdd,\U6536\U5c55,\U673a\U6784";
-countryUrl = "/provinceCompared/index?orgCode=1360000&userAccount=1360000";
-historyUrl = "/warnInfo/areaInfo?orgCode=1360000&userAccount=1360000";
-homeUrl = "/warnInfo/provinceShow?orgCode=1360000&userAccount=1360000";
-orgCode = 1360000;
-orgName = "\U6c5f\U897f";
-password = 5822184DE8A222FB73F42D837F8641934CA4AD29DFF98CE03A7256B3;
-topicUrl = "/specialIndex/index?orgCode=1360000&userAccount=1360000";
-userAccount = 1360000;
-userName = "\U6d4b\U8bd5";
-};
-msgCode = 0;
-msgText = "\U64cd\U4f5c\U6210\U529f!";
+message = "\U9a8c\U8bc1\U7801\U5df2\U53d1\U9001\Uff01";
+status = 200;
 }

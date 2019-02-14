@@ -42,6 +42,8 @@
 		74BB4B882213D5B000F91991 /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B872213D5B000F91991 /* CYLPlusButtonSubclass.m */; };
 		74BB4B8B2213F93100F91991 /* NoLoginBx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BB4B8A2213F93100F91991 /* NoLoginBx.m */; };
 		74BB4B8D2213F93E00F91991 /* NoLoginS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BB4B8C2213F93E00F91991 /* NoLoginS.storyboard */; };
+		74F9ADF32214FE5E0093DC55 /* NoLoginWx.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F9ADF22214FE5E0093DC55 /* NoLoginWx.m */; };
+		74F9ADF52214FE6C0093DC55 /* NoLoginWx.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F9ADF42214FE6C0093DC55 /* NoLoginWx.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,9 @@
 		74BB4B892213F93100F91991 /* NoLoginBx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoLoginBx.h; sourceTree = "<group>"; };
 		74BB4B8A2213F93100F91991 /* NoLoginBx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoLoginBx.m; sourceTree = "<group>"; };
 		74BB4B8C2213F93E00F91991 /* NoLoginS.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoLoginS.storyboard; sourceTree = "<group>"; };
+		74F9ADF12214FE5E0093DC55 /* NoLoginWx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NoLoginWx.h; sourceTree = "<group>"; };
+		74F9ADF22214FE5E0093DC55 /* NoLoginWx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NoLoginWx.m; sourceTree = "<group>"; };
+		74F9ADF42214FE6C0093DC55 /* NoLoginWx.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoLoginWx.xib; sourceTree = "<group>"; };
 		C2F8CCE665D89BF26B868C99 /* Pods-XHapplyTs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XHapplyTs.release.xcconfig"; path = "Pods/Target Support Files/Pods-XHapplyTs/Pods-XHapplyTs.release.xcconfig"; sourceTree = "<group>"; };
 		F046C8D9BE2D5FADE86AA93D /* libPods-XHapplyTs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XHapplyTs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -267,6 +272,9 @@
 				7493BA662214254C00F9D45F /* NoLoginSelctBx.h */,
 				7493BA672214254C00F9D45F /* NoLoginSelctBx.m */,
 				7493BA692214256300F9D45F /* NoLoginSelctBx.xib */,
+				74F9ADF12214FE5E0093DC55 /* NoLoginWx.h */,
+				74F9ADF22214FE5E0093DC55 /* NoLoginWx.m */,
+				74F9ADF42214FE6C0093DC55 /* NoLoginWx.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,6 +754,7 @@
 				74BB4B852213C5A100F91991 /* NoMineS.storyboard in Resources */,
 				74BB4B602213BCFB00F91991 /* Assets.xcassets in Resources */,
 				74BB4B5D2213BCFB00F91991 /* File in Resources */,
+				74F9ADF52214FE6C0093DC55 /* NoLoginWx.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,6 +843,7 @@
 				74BB4B5B2213BCFB00F91991 /* AppDelegate.m in Sources */,
 				7493BA6522141A7E00F9D45F /* NoLoginBwx.m in Sources */,
 				74BB4B792213C47000F91991 /* NoNewBx.m in Sources */,
+				74F9ADF32214FE5E0093DC55 /* NoLoginWx.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

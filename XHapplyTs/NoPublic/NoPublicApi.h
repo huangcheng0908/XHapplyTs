@@ -149,9 +149,30 @@ typedef NS_ENUM(NSInteger,GradientDirection)
                 Imagewidth:(CGFloat)Imagewidth;
 
 
+/**
+ 倒计时
 
+ @param scond <#scond description#>
+ @param sender <#sender description#>
+ @param titleBut <#titleBut description#>
+ @param titleColor <#titleColor description#>
+ @param bgButColor <#bgButColor description#>
+ @param block <#block description#>
+ */
+-(void)QQJXPerfectCountdown:(NSInteger)scond
+                     sender:(UIButton *)sender
+                   titleBut:(NSString *)titleBut
+                 titleColor:(UIColor *)titleColor
+                 bgButColor:(UIColor *)bgButColor
+                      block:(void(^)(void))block;
 
+/**
+ 手机号验证
 
+ @param mobileNum <#mobileNum description#>
+ @return <#return value description#>
+ */
+-(BOOL)XJValidateContactNumber:(NSString *)mobileNum;
 
 
 @end

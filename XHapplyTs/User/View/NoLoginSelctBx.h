@@ -11,6 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NoLoginSelctBx : UIView
+@property (strong,nonatomic)void (^geSex)(NSInteger index);
+@property (weak, nonatomic) IBOutlet UILabel *g8LoginL;
+@property (weak, nonatomic) IBOutlet UILabel *g8RegL;
+@property (weak, nonatomic) IBOutlet UIView *g8BgBx;
+@property (weak, nonatomic) IBOutlet UILabel *geLine;
+@property (weak, nonatomic) IBOutlet UILabel *geLineS;
 
 +(instancetype)creartXib;
 

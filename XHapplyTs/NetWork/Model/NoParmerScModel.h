@@ -13,19 +13,53 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NoParmerScModel : NSObject
 
 /**
- 账号
+ 手机号
  */
-@property (retain,nonatomic)NSString * userAccount;
+@property (retain,nonatomic)NSString * mobile;
 
 /**
  密码
  */
 @property (retain,nonatomic)NSString * password;
 
+/**
+ 短信类型：0：通用模板；1：注册；2：短信登录
+ */
+@property (retain,nonatomic)NSString * type;
 
-@property (retain,nonatomic)NSString * msgCode;
+/**
+ 用户角色，1-会员，2-亲友团
+ */
+@property (retain,nonatomic)NSString * role;
 
-@property (retain,nonatomic)NSString * msgText;
+/**
+ 确认密码
+ */
+@property (retain,nonatomic)NSString * repassword;
+
+/**
+ 短信验证码
+ */
+@property (retain,nonatomic)NSString * verify;
+
+
+
+
+
+
+
+
+
+
+/**
+ 返回码：200：成功；300：操作失败；
+ */
+@property (retain,nonatomic)NSString * status;
+
+/**
+ 文字信息
+ */
+@property (retain,nonatomic)NSString * message;
 
 
 

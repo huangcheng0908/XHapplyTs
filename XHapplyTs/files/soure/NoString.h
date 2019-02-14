@@ -16,7 +16,7 @@
 #define CXTLog( s, ... )
 #endif
 
-#define InterIP                                 (@"http://jxpicc.weinova.net:8088/twms-web/")
+#define InterIP                                 (@"http://marry.weinova.net/")
 #define ivKey                                   @"52369874"
 #define Nokey                                  @"novasoft"
 #define XJEmpty(X)                          ([X length] <= 0 || X == nil || [X isEqualToString:@""] || [X isEqual:[NSNull null]])
@@ -51,7 +51,7 @@
 #define NoLineColor      JXFHexRGB(0xCCCCCC)
 #define NoBgMainColor      JXFHexRGB(0x131313)
 #define NoLoginBgColor      JXFHexRGB(0xF5F5F5)
-
+#define NoLoginRsColor      JXFHexRGB(0xA8A9AA)
 
 
 

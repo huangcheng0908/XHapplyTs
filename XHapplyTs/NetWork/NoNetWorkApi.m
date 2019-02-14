@@ -127,12 +127,12 @@
     [SVProgressHUD dismiss];
     CXTLog(@"json = %@",dic);
     NoParmerScModel * parM = [NoParmerScModel mj_objectWithKeyValues:dic];
-    if (parM.msgCode.integerValue == 0)
+    if (parM.status.integerValue == 200)
     {
         return parM;
     }else
     {
-        [SVProgressHUD showErrorWithStatus:parM.msgText];
+        [SVProgressHUD showErrorWithStatus:parM.message];
     }
     return nil;
 }

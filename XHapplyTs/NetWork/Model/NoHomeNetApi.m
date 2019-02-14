@@ -25,7 +25,67 @@
     return network;
 }
 
+-(void)g8NoLoginAccount:(NSString *)mobile
+                    pwd:(NSString *)pwd
+                succeed:(QQJXNetworkSuccess)succeed
+                failure:(QQJXCommonFailBlock)failure
+{
+    NoParmerScModel * scM = [[NoParmerScModel alloc]init];
+    scM.mobile = mobile;
+    scM.password = pwd;
+    [[NoHomeNetApi sharedNoHomeNetApi]g8NoRequestAlertY:YES
+                                             parameters:scM
+                                                   mapS:@"s=/home/user/login"
+                                                succeed:succeed
+                                                failure:failure];
+}
 
+-(void)g8NoRegistAccount:(NSString *)mobile
+                     pwd:(NSString *)pwd
+                  verify:(NSString *)verify
+                 succeed:(QQJXNetworkSuccess)succeed
+                 failure:(QQJXCommonFailBlock)failure
+{
+    NoParmerScModel * scM = [[NoParmerScModel alloc]init];
+    scM.mobile = mobile;
+    scM.password = pwd;
+    scM.repassword = pwd;
+    scM.verify = verify;
+    [[NoHomeNetApi sharedNoHomeNetApi]g8NoRequestAlertY:YES
+                                             parameters:scM
+                                                   mapS:@"s=/home/user/register"
+                                                succeed:succeed
+                                                failure:failure];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-(void)g8NoSendverify:(NSString *)moblie
+                 type:(NoCodeTy)type
+              succeed:(QQJXNetworkSuccess)succeed
+              failure:(QQJXCommonFailBlock)failure
+{
+    NoParmerScModel * scM = [[NoParmerScModel alloc]init];
+    scM.mobile = moblie;
+    scM.type = [NSString stringWithFormat:@"%ld",type];
+    [[NoHomeNetApi sharedNoHomeNetApi]g8NoRequestAlertY:YES
+                                             parameters:scM
+                                                   mapS:@"s=/home/user/send_verify"
+                                                succeed:succeed
+                                                failure:failure];
+}
 
 
 -(void)g8NoRequestAlertY:(BOOL)alertY

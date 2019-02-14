@@ -271,7 +271,61 @@
     return styleS;
 }
 
+-(void)QQJXPerfectCountdown:(NSInteger)scond
+                     sender:(UIButton *)sender
+                   titleBut:(NSString *)titleBut
+                 titleColor:(UIColor *)titleColor
+                 bgButColor:(UIColor *)bgButColor
+                      block:(void(^)(void))block
+{
+    __block NSInteger second = scond;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), NSEC_PER_SEC * 1.0f, 0);
+    dispatch_source_set_event_handler(timer, ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (second > 0)
+            {
+                sender.userInteractionEnabled = NO;
+                [sender setTitle:[NSString stringWithFormat:@"%@ (%lds)",titleBut,(long)second] forState:UIControlStateNormal];
+                [sender setTitleColor:titleColor forState:UIControlStateNormal];
+                second--;
+            }else
+            {
+                sender.userInteractionEnabled = YES;
+                dispatch_source_cancel(timer);
+                block();
+            }
+        });
+    });
+    dispatch_resume(timer);
+}
 
+
+-(BOOL)XJValidateContactNumber:(NSString *)mobileNum
+{
+    NSString * MOBILE = @"^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$";
+    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
+    NSString * CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
+    NSString * CT = @"^1((33|53|4[0-9]|7[0-9]|8[0-9]|9[0-9])[0-9]|349)\\d{7}$";
+    NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
+    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
+    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
+    NSPredicate *regextestPHS = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", PHS];
+    if(([regextestmobile evaluateWithObject:mobileNum] == YES)
+       || ([regextestcm evaluateWithObject:mobileNum] == YES)
+       || ([regextestct evaluateWithObject:mobileNum] == YES)
+       || ([regextestcu evaluateWithObject:mobileNum] == YES)
+       || ([regextestPHS evaluateWithObject:mobileNum] == YES))
+    {
+        return YES;
+    }else
+    {
+        return NO;
+    }
+}
 
 
 

@@ -23,15 +23,56 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  登录
 
- @param account <#account description#>
+ @param mobile <#account description#>
  @param pwd <#pwd description#>
  @param succeed <#succeed description#>
  @param failure <#failure description#>
  */
--(void)g8NoLoginAccount:(NSString *)account
+-(void)g8NoLoginAccount:(NSString *)mobile
                     pwd:(NSString *)pwd
                 succeed:(QQJXNetworkSuccess)succeed
                 failure:(QQJXCommonFailBlock)failure;
+
+/**
+ 获取验证码
+
+ @param moblie <#moblie description#>
+ @param type <#type description#>
+ @param succeed <#succeed description#>
+ @param failure <#failure description#>
+ */
+-(void)g8NoSendverify:(NSString *)moblie
+                 type:(NoCodeTy)type
+              succeed:(QQJXNetworkSuccess)succeed
+              failure:(QQJXCommonFailBlock)failure;
+
+/**
+ 注册
+
+ @param mobile <#mobile description#>
+ @param pwd <#pwd description#>
+ @param verify <#verify description#>
+ @param succeed <#succeed description#>
+ @param failure <#failure description#>
+ */
+-(void)g8NoRegistAccount:(NSString *)mobile
+                     pwd:(NSString *)pwd
+                  verify:(NSString *)verify
+                succeed:(QQJXNetworkSuccess)succeed
+                failure:(QQJXCommonFailBlock)failure;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  总网络

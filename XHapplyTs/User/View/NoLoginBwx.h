@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NoLoginWx.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NoLoginBwx : UIView
+@property (strong,nonatomic)void (^geLoginBs)(NSInteger index);
+@property (retain,nonatomic) NoLoginWx * LoginWs;
+@property (assign,nonatomic)NSInteger indexS;
 
 @end
 

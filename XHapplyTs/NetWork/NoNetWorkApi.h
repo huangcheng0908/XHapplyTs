@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #define BASE_URL InterIP
-#define InterZanIP @""
+#define InterZanIP @"index.php?"
 
 typedef NS_ENUM(NSInteger,NoHttpMethod)
 {
